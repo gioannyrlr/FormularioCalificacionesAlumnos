@@ -36,7 +36,7 @@ if(isset($_POST['inputs'])){
 ?>
         <form action="resultados.php" method="post">
             <input type="number" maxlength="8" name="cedula[]" id="input" placeholder="Cédula de identidad" required>
-            <input type="text" name="nombre[]" id="input" placeholder="Nombre" required>
+            <input type="text" name="nombre[]" id="input" pattern="[a-z A-Z]+" oninvalid="this.setCustomValidity('Sólo puedes ingresar letras.')" placeholder="Nombre" required>
             <input type="number" max="20" min="1" name="matematicas[]" id="input" placeholder="Calificación" required>
             <input type="number" max="20" min="1" name="fisica[]" id="input" placeholder="Calificación" required>
             <input type="number" max="20" min="1" name="programacion[]" id="input" placeholder="Calificación" required><br><br>
